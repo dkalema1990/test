@@ -1,6 +1,20 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
 
-st.title("🎈 My new app")
+
+st.title("🎈 Excel Upload")
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+    "How to upload excel files in streamlit")
+
+st.title("Excel File Loader")
+
+uploaded_file = st.file_uploader("Choose an Excel file", type=["xlsx", "xls"])
+
+if uploaded_file is not None:
+    try:
+        df = pd.read_excel(uploaded_file)
+        st.write("File uploaded successfully! Here's the first few rows:")
+        st.dataframe(df.head())
+    except Exception as e:
+        st.error(f"Error reading the Excel file: {e}")
