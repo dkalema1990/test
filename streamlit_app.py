@@ -4,8 +4,8 @@ import numpy as np
 
 # Assuming you have pages/home.py and pages/dashboard.py
 st.sidebar.title("Custom Navigation")
-st.sidebar.page_link("app.py", label="Home", icon="🏠")
-st.sidebar.page_link("pages/dashboard.py", label="Dashboard", icon="📊")
+st.sidebar.page_link("test.py", label="Home", icon="🏠")
+## st.sidebar.page_link("pages/dashboard.py", label="Dashboard", icon="📊")
 st.sidebar.page_link("https://docs.streamlit.io", label="Streamlit Docs", icon="📚")
 
 st.title("Welcome to the Home Page")
