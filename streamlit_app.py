@@ -2,6 +2,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+# Assuming you have pages/home.py and pages/dashboard.py
+st.sidebar.title("Custom Navigation")
+st.sidebar.page_link("app.py", label="Home", icon="🏠")
+st.sidebar.page_link("pages/dashboard.py", label="Dashboard", icon="📊")
+st.sidebar.page_link("https://docs.streamlit.io", label="Streamlit Docs", icon="📚")
+
+st.title("Welcome to the Home Page")
+st.write("This is the main content area.")
+
 
 st.title("🎈 Excel Upload")
 st.write(
