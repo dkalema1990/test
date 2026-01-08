@@ -3,8 +3,6 @@ import pandas as pd
 import numpy as np
 
 
-
-
 st.title("🎈 Excel Upload")
 st.write(
     "How to upload excel files in streamlit")
